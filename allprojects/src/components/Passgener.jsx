@@ -33,33 +33,41 @@ function Passgener() {
     
 
   return (
-    <div>
-      <h1> PASSWORLD GENERATOR</h1>
-      <div>
-        <input type="text" 
+    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
+      <h1 className='text-white text-center my-3'> PASSWORLD GENERATOR</h1>
+      <div className="flex shadow rounded-lg overflow-hidden mb-4">
+        <input 
+        className="outline-none w-full py-1 px-3"
+        type="text" 
         value={Password} 
         readOnly
         />
-        <button>Copy</button>
+        <button 
+        className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>
+            Copy
+        </button>
       </div>
-      <div>
-        <div>
-            <input type="range"
+      <div className='flex text-sm gap-x-2'>
+        <div className='flex items-center gap-x-1'> 
+            <input 
+             className='cursor-pointer'
+             type="range"
             value={Length}
             min={6}
             max={11}
             onChange={(e)=>(setLength(e.target.value))} />
-            <label>Length : {Length}</label>
+            <label>Length: {Length}</label>
         </div>
         <div>
-            <input type="checkbox" 
+            <input className="flex items-center gap-x-1"
+            type="checkbox" 
             defaultChecked={Numbers} 
             onChange={()=>(
                 setNumbers((prev)=>(!prev))
             )}
             id='numperinput'
             />
-         <label htmlFor="numberInput">Numbers</label>
+         <label htmlFor="numberInput">Number</label>
       </div>
       <div className="flex items-center gap-x-1">
           <input
