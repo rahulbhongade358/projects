@@ -35,7 +35,46 @@ function Passgener() {
   return (
     <div>
       <h1> PASSWORLD GENERATOR</h1>
+      <div>
+        <input type="text" 
+        value={Password} 
+        readOnly
+        />
+        <button>Copy</button>
+      </div>
+      <div>
+        <div>
+            <input type="range"
+            value={Length}
+            min={6}
+            max={11}
+            onChange={(e)=>(setLength(e.target.value))} />
+            <label>Length : {Length}</label>
+        </div>
+        <div>
+            <input type="checkbox" 
+            defaultChecked={Numbers} 
+            onChange={()=>(
+                setNumbers((prev)=>(!prev))
+            )}
+            id='numperinput'
+            />
+         <label htmlFor="numberInput">Numbers</label>
+      </div>
+      <div className="flex items-center gap-x-1">
+          <input
+              type="checkbox"
+              defaultChecked={Charecter}
+              id="characterInput"
+              onChange={() => {
+                  setCharecter((prev) => !prev )
+              }}
+          />
+          <label htmlFor="characterInput">Characters</label>
+      </div>
     </div>
+</div>
+    
   )
 }
 
