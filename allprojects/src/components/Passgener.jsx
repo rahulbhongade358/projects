@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-
+import toast, {Toaster} from 'react-hot-toast'
 function Passgener() {
 
     const [Length, setLength] = useState(6)
@@ -31,6 +31,13 @@ function Passgener() {
     
     }, [Length,Charecter,Numbers,PasswordGener])
     
+    const submit = ()=> toast('Copied succesfully',{
+      style: {
+        background: '#333',
+        color: '#fff',
+        fontFamily:'serif'
+      },
+    });
 
   return (
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
@@ -43,9 +50,11 @@ function Passgener() {
         readOnly
         />
         <button 
+        onClick={submit}
         className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>
             Copy
         </button>
+        <Toaster/>
       </div>
       <div className='flex text-sm gap-x-2'>
         <div className='flex items-center gap-x-1'> 
