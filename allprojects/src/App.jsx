@@ -1,10 +1,12 @@
 import React from 'react'
-import Passgener from './components/Passgener'
+import Allroutes from './components/Allroutes'
+import Nav from './components/Nav'
 
 function App() {
   return (
     <div>
-     <Passgener/>
+      <Nav/>
+     <Allroutes/>
     </div>
   )
 }
