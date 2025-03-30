@@ -1,6 +1,6 @@
 import React from 'react'
 import './game.css'
-function Sitedata({imgUrl,name,description,state}) {
+function Sitedata({imgUrl,name,state, description, releaseDate,developer,platform,rating}) {
   return (
     <div className='game-card'>
       <img 
@@ -8,8 +8,17 @@ function Sitedata({imgUrl,name,description,state}) {
       className='imgURL'
       />
       <h1 className='game-card-title'>{name}</h1>
-      <p>{description}</p>
-      <p>{state}</p>
+     
+      <div className='containt'>
+    <p>State: {state}</p>
+    <p>Developer: {developer}</p>
+    <p>Rating: {rating}</p>
+    <p>Release : {releaseDate}</p>
+    <p>Platform: {platform}</p>
+    <p className='descp'>{description}</p>
+  
+</div>
+
     </div>
   )
 }
