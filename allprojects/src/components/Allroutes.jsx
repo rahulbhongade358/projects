@@ -4,7 +4,7 @@ import Home from './Home'
 import Bgchanger from './Bgchanger'
 import Passgener from './Passgener'
 import Currency from './Currency'
-import Smallsite from './Smallsite'
+import Smallsite from './gamingsite/Smallsite'
 function Allroutes() {
   return (
     <div>
