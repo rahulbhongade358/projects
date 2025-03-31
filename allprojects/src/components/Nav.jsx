@@ -8,6 +8,7 @@ function Nav() {
       <NavLink to={"/currency"}  className={({isActive})=>isActive?"text-fuchsia-400":""}> <p>Currency</p> </NavLink>
       <NavLink to={"/passgener"}  className={({isActive})=>isActive?"text-fuchsia-400":""}> <p>Passgener</p> </NavLink>
       <NavLink to={"/smallsite"}  className={({isActive})=>isActive?"text-fuchsia-400":""}> <p> Mini-Site</p> </NavLink>
+      <NavLink to={"/hooks"}  className={({isActive})=>isActive?"text-fuchsia-400":""}> <p> Hooks </p> </NavLink>
     </div>
   )
 }
