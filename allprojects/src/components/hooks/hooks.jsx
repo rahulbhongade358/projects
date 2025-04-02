@@ -1,19 +1,30 @@
 import React, { useState } from 'react'
+import toast, {Toaster} from 'react-hot-toast'
 import './Hooks.css'
 function hooks() {
   const [quantity, setquantity] = useState(0)
-
-  
   const increase = ()=>{
     if (quantity==6) {
-   alert(" you reached the limit ")
+      toast('😭😭You Reached The Limit ',{
+        style: {
+          background: '#ffcc00',
+          color: 'red',
+          fontFamily:'serif',
+          fontSize: '20px',
+          borderRadius:'20px'
+        },
+      });
     }else{setquantity(quantity+1)}
+    
   }
   const decrease = ()=>{
     if (quantity>1) {
       setquantity(quantity-1)
     }
+    
   }
+  
+
   return (
     <div>
       This project based on Hook's
@@ -25,6 +36,7 @@ function hooks() {
       <button className='minus' onClick={decrease}>-</button>
       <p className='total'>Total:{quantity}</p>
       <button className='plus' onClick={increase}>+</button>
+      <Toaster/>
     </div>
     </div>
   )
